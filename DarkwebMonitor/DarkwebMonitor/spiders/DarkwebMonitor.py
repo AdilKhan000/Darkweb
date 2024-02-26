@@ -1,4 +1,4 @@
-from ..items import DarkWebScrapingItem
+from ..items import DarkwebmonitorItem
 
 from collections import Counter
 import lxml.html.clean
@@ -7,6 +7,8 @@ import logging
 
 import scrapy
 from scrapy.utils.log import configure_logging
+import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk import PorterStemmer
 from bs4 import BeautifulSoup
@@ -137,7 +139,7 @@ class DrlSpider(scrapy.Spider):
         ## New yield for API v1: 06-09-2020 | In v1 revision 2, we will be providing back the content also on a new endpoint
         ## Removing proxy key from Meta Data
         meta_data = {key:val for key, val in response.meta.items() if key not in ['proxy', 'download_timeout']}
-        # item = DarkWebScrapingItem()
+        # item = DarkwebmonitorItem()
         # item['url'] = response.url
         # item['title'] = title
         # item['title_keywords'] = title_keywords

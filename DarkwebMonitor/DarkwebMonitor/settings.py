@@ -93,11 +93,11 @@ USER_AGENT_LIST = [
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/534.55.3 (KHTML, like Gecko) Version/5.1.3 Safari/534.53.10',
     ]
 
-HTTP_PROXY = 'http://127.0.0.1:8123'
+HTTP_PROXY = 'http://127.0.0.1:8181'
 
 DOWNLOADER_MIDDLEWARES = {
-    'dark_web_scraping.middlewares.RandomUserAgentMiddleware': 400,
-    'dark_web_scraping.middlewares.ProxyMiddleware': 410,
+    'DarkwebMonitor.middlewares.RandomUserAgentMiddleware': 400,
+    'DarkwebMonitor.middlewares.ProxyMiddleware': 410,
     'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
 }
 
