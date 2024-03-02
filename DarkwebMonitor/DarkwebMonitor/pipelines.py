@@ -6,11 +6,10 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
-from . import settings
 
 
 class DarkwebmonitorPipeline:
     def process_item(self, item, spider):
-        self.collection.insert_one(dict(item))
-        #return item
-        return ''
+        # Process your item here
+        return item
+

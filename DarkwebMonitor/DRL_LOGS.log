@@ -527,3 +527,166 @@ INFO 2024-02-26 18:32:25,642: Dumping Scrapy stats:
  'scheduler/enqueued/memory': 6,
  'start_time': datetime.datetime(2024, 2, 26, 13, 2, 23, 465972, tzinfo=datetime.timezone.utc)}
 INFO 2024-02-26 18:32:25,642: Spider closed (finished)
+INFO 2024-03-02 16:20:29,530: Scrapy 2.11.1 started (bot: DarkwebMonitor)
+INFO 2024-03-02 16:20:29,552: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 24.3.0, Python 3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)], pyOpenSSL 24.0.0 (OpenSSL 3.2.1 30 Jan 2024), cryptography 42.0.5, Platform Windows-10-10.0.22631-SP0
+INFO 2024-03-02 16:20:29,555: Enabled addons:
+[]
+DEBUG 2024-03-02 16:20:29,556: Using selector: SelectSelector
+DEBUG 2024-03-02 16:20:29,558: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+DEBUG 2024-03-02 16:20:29,558: Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+INFO 2024-03-02 16:20:29,657: Telnet Password: 214854a36085f0f6
+WARNING 2024-03-02 16:20:29,869: C:\Users\ADIL KHAN\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO 2024-03-02 16:20:29,904: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO 2024-03-02 16:20:29,906: Overridden settings:
+{'BOT_NAME': 'DarkwebMonitor',
+ 'DEPTH_LIMIT': 5,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'DarkwebMonitor.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['DarkwebMonitor.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+INFO 2024-03-02 16:20:30,830: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'DarkwebMonitor.middlewares.RandomUserAgentMiddleware',
+ 'DarkwebMonitor.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO 2024-03-02 16:20:30,869: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO 2024-03-02 16:20:30,872: Enabled item pipelines:
+['DarkwebMonitor.pipelines.DarkwebmonitorPipeline']
+INFO 2024-03-02 16:20:30,872: Spider opened
+INFO 2024-03-02 16:20:30,920: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO 2024-03-02 16:20:30,921: Telnet console listening on 127.0.0.1:6023
+DEBUG 2024-03-02 16:20:32,930: Retrying <GET http://6nhmgdpnyoljh5uzr5kwlatx2u3diou4ldeommfxjz3wkhalzgjqxzqd.onion/robots.txt> (failed 1 times): Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+DEBUG 2024-03-02 16:20:32,932: Retrying <GET http://jgwe5cjqdbyvudjqskaajbfibfewew4pndx52dye7ug3mt3jimmktkid.onion/robots.txt> (failed 1 times): Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+DEBUG 2024-03-02 16:20:34,936: Retrying <GET http://6nhmgdpnyoljh5uzr5kwlatx2u3diou4ldeommfxjz3wkhalzgjqxzqd.onion/robots.txt> (failed 2 times): Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+DEBUG 2024-03-02 16:20:34,937: Retrying <GET http://jgwe5cjqdbyvudjqskaajbfibfewew4pndx52dye7ug3mt3jimmktkid.onion/robots.txt> (failed 2 times): Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+ERROR 2024-03-02 16:20:36,951: Gave up retrying <GET http://6nhmgdpnyoljh5uzr5kwlatx2u3diou4ldeommfxjz3wkhalzgjqxzqd.onion/robots.txt> (failed 3 times): Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+ERROR 2024-03-02 16:20:36,952: Error downloading <GET http://6nhmgdpnyoljh5uzr5kwlatx2u3diou4ldeommfxjz3wkhalzgjqxzqd.onion/robots.txt>: Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+Traceback (most recent call last):
+  File "C:\Users\ADIL KHAN\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\scrapy\core\downloader\middleware.py", line 54, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+ERROR 2024-03-02 16:20:36,955: Gave up retrying <GET http://jgwe5cjqdbyvudjqskaajbfibfewew4pndx52dye7ug3mt3jimmktkid.onion/robots.txt> (failed 3 times): Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+ERROR 2024-03-02 16:20:36,955: Error downloading <GET http://jgwe5cjqdbyvudjqskaajbfibfewew4pndx52dye7ug3mt3jimmktkid.onion/robots.txt>: Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+Traceback (most recent call last):
+  File "C:\Users\ADIL KHAN\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\scrapy\core\downloader\middleware.py", line 54, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+DEBUG 2024-03-02 16:20:38,972: Retrying <GET http://6nhmgdpnyoljh5uzr5kwlatx2u3diou4ldeommfxjz3wkhalzgjqxzqd.onion/> (failed 1 times): Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+DEBUG 2024-03-02 16:20:38,973: Retrying <GET http://jgwe5cjqdbyvudjqskaajbfibfewew4pndx52dye7ug3mt3jimmktkid.onion/> (failed 1 times): Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+DEBUG 2024-03-02 16:20:40,989: Retrying <GET http://6nhmgdpnyoljh5uzr5kwlatx2u3diou4ldeommfxjz3wkhalzgjqxzqd.onion/> (failed 2 times): Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+DEBUG 2024-03-02 16:20:40,991: Retrying <GET http://jgwe5cjqdbyvudjqskaajbfibfewew4pndx52dye7ug3mt3jimmktkid.onion/> (failed 2 times): Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+ERROR 2024-03-02 16:20:42,995: Gave up retrying <GET http://jgwe5cjqdbyvudjqskaajbfibfewew4pndx52dye7ug3mt3jimmktkid.onion/> (failed 3 times): Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+ERROR 2024-03-02 16:20:42,996: Gave up retrying <GET http://6nhmgdpnyoljh5uzr5kwlatx2u3diou4ldeommfxjz3wkhalzgjqxzqd.onion/> (failed 3 times): Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+ERROR 2024-03-02 16:20:43,098: Error downloading <GET http://jgwe5cjqdbyvudjqskaajbfibfewew4pndx52dye7ug3mt3jimmktkid.onion/>
+Traceback (most recent call last):
+  File "C:\Users\ADIL KHAN\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\scrapy\core\downloader\middleware.py", line 54, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+ERROR 2024-03-02 16:20:43,100: Error downloading <GET http://6nhmgdpnyoljh5uzr5kwlatx2u3diou4ldeommfxjz3wkhalzgjqxzqd.onion/>
+Traceback (most recent call last):
+  File "C:\Users\ADIL KHAN\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\scrapy\core\downloader\middleware.py", line 54, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 10061: No connection could be made because the target machine actively refused it..
+INFO 2024-03-02 16:20:43,202: Closing spider (finished)
+INFO 2024-03-02 16:20:43,203: Stored json feed (0 items) in: scraped_data_DRL_2024-03-02T10-50-30+00-00.json
+INFO 2024-03-02 16:20:43,204: Dumping Scrapy stats:
+{'downloader/exception_count': 12,
+ 'downloader/exception_type_count/twisted.internet.error.ConnectionRefusedError': 12,
+ 'downloader/request_bytes': 4038,
+ 'downloader/request_count': 12,
+ 'downloader/request_method_count/GET': 12,
+ 'elapsed_time_seconds': 12.282328,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 3, 2, 10, 50, 43, 202087, tzinfo=datetime.timezone.utc),
+ 'log_count/DEBUG': 11,
+ 'log_count/ERROR': 8,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 1,
+ 'retry/count': 8,
+ 'retry/max_reached': 4,
+ 'retry/reason_count/twisted.internet.error.ConnectionRefusedError': 8,
+ "robotstxt/exception_count/<class 'twisted.internet.error.ConnectionRefusedError'>": 2,
+ 'robotstxt/request_count': 2,
+ 'scheduler/dequeued': 6,
+ 'scheduler/dequeued/memory': 6,
+ 'scheduler/enqueued': 6,
+ 'scheduler/enqueued/memory': 6,
+ 'start_time': datetime.datetime(2024, 3, 2, 10, 50, 30, 919759, tzinfo=datetime.timezone.utc)}
+INFO 2024-03-02 16:20:43,206: Spider closed (finished)
+INFO 2024-03-02 16:33:48,822: Scrapy 2.11.1 started (bot: DarkwebMonitor)
+INFO 2024-03-02 16:33:48,859: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 24.3.0, Python 3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)], pyOpenSSL 24.0.0 (OpenSSL 3.2.1 30 Jan 2024), cryptography 42.0.5, Platform Windows-10-10.0.22631-SP0
+INFO 2024-03-02 16:33:48,863: Enabled addons:
+[]
+DEBUG 2024-03-02 16:33:48,863: Using selector: SelectSelector
+DEBUG 2024-03-02 16:33:48,865: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+DEBUG 2024-03-02 16:33:48,865: Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+INFO 2024-03-02 16:33:48,879: Telnet Password: 84cb0389c0853fb6
+WARNING 2024-03-02 16:33:49,043: C:\Users\ADIL KHAN\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO 2024-03-02 16:33:49,043: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter']
+INFO 2024-03-02 16:33:49,043: Overridden settings:
+{'BOT_NAME': 'DarkwebMonitor',
+ 'DEPTH_LIMIT': 5,
+ 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOGSTATS_INTERVAL': 0,
+ 'NEWSPIDER_MODULE': 'DarkwebMonitor.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['DarkwebMonitor.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+INFO 2024-03-02 16:33:49,211: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'DarkwebMonitor.middlewares.RandomUserAgentMiddleware',
+ 'DarkwebMonitor.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO 2024-03-02 16:33:49,226: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO 2024-03-02 16:33:49,236: Enabled item pipelines:
+['DarkwebMonitor.pipelines.DarkwebmonitorPipeline']
+INFO 2024-03-02 16:33:49,236: Telnet console listening on 127.0.0.1:6023
+INFO 2024-03-02 16:33:49,236: Spider opened
+DEBUG 2024-03-02 16:33:53,581: Crawled (200) <GET http://c32zjeghcp5tj3kb72pltz56piei66drc63vkhn5yixiyk4cmerrjtid.onion/robots.txt> (referer: None)
+DEBUG 2024-03-02 16:33:56,221: Crawled (200) <GET http://c32zjeghcp5tj3kb72pltz56piei66drc63vkhn5yixiyk4cmerrjtid.onion/f/guns/comments> (referer: None)
